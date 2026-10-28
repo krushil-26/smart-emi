@@ -6,6 +6,7 @@ import { SEOContentSection } from "@/components/seo-content-section";
 import { FAQSection, FAQItem } from "@/components/faq-section";
 import { BreadcrumbSchema } from "@/components/json-ld-schema";
 import { useCurrency } from "@/components/currency-context";
+import { AdSenseAd } from "@/components/adsense";
 
 const homeFaqs: FAQItem[] = [
   {
@@ -45,6 +46,8 @@ export default function HomePage() {
         title="EMI Calculator"
         subtitle="Calculate your monthly installment, total interest, and full repayment schedule"
       />
+
+      <AdSenseAd />
 
       {/* SEO Content Section */}
       <SEOContentSection />

@@ -7,6 +7,7 @@ import { SEOContentSection } from "@/components/seo-content-section";
 import { BreadcrumbSchema } from "@/components/json-ld-schema";
 import { useCurrency } from "@/components/currency-context";
 import { Car } from "lucide-react";
+import { AdSenseAd } from "@/components/adsense";
 
 const carLoanFaqs: FAQItem[] = [
   {
@@ -69,6 +70,8 @@ export function CarLoanClient() {
           { label: "₹25 Lakh", value: 2500000 },
         ]}
       />
+
+      <AdSenseAd />
 
       {/* SEO Content */}
       <SEOContentSection />

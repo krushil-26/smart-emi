@@ -4,6 +4,7 @@ import React from "react";
 import { LoanComparison } from "@/components/loan-comparison";
 import { BreadcrumbSchema } from "@/components/json-ld-schema";
 import { useCurrency } from "@/components/currency-context";
+import { AdSenseAd } from "@/components/adsense";
 
 export function CompareLoansClient() {
   const { currency } = useCurrency();
@@ -18,6 +19,7 @@ export function CompareLoansClient() {
       />
 
       <LoanComparison currency={currency} />
+      <AdSenseAd />
     </div>
   );
 }

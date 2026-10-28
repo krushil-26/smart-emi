@@ -4,6 +4,7 @@ import React from "react";
 import { CurrencyProvider, useCurrency } from "@/components/currency-context";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { AdSenseProvider } from "@/components/adsense";
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
   const { currency, setCurrency } = useCurrency();
@@ -22,7 +23,9 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
 export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <CurrencyProvider>
-      <LayoutContent>{children}</LayoutContent>
+      <AdSenseProvider>
+        <LayoutContent>{children}</LayoutContent>
+      </AdSenseProvider>
     </CurrencyProvider>
   );
 }

@@ -11,7 +11,7 @@ export function Footer() {
       <div className="pointer-events-none absolute bottom-0 right-1/4 w-56 h-56 bg-accent-600/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center space-x-2 text-white">
@@ -65,6 +65,24 @@ export function Footer() {
                   <a href={item.href} className="hover:text-brand-400 transition-colors duration-150">
                     {item.label}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="font-semibold text-white mb-3 text-xs tracking-wider uppercase">Company</h3>
+            <ul className="space-y-2 text-xs">
+              {[
+                { href: "/about", label: "About Us" },
+                { href: "/contact", label: "Contact Us" },
+                { href: "/privacy-policy", label: "Privacy Policy" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-brand-400 transition-colors duration-150">
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
